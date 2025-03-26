@@ -13,11 +13,4 @@ public class Gestao360Application {
 		SpringApplication.run(Gestao360Application.class, args);
 	}
 
-	@Bean
-	public AuthenticationManager authenticationManager(
-			AuthenticationConfiguration authenticationConfiguration
-	) throws Exception {
-		return authenticationConfiguration.getAuthenticationManager();
-	}
-
 }
