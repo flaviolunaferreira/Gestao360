@@ -3,6 +3,7 @@ server:
 
 spring:
   datasource:
+    name: gestao360
     url: jdbc:mysql://localhost:3306/gestao360?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: root
     password: chacal3012

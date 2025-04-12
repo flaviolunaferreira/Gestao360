@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.RequiredArgsConstructor;
+import the.coyote.Gestao360.dto.config.FormField;
 
 import java.util.List;
 
@@ -18,9 +19,11 @@ public class ModuloEntity extends BasicEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @FormField(label = "Nome", required = true, minLength = 3, maxLength = 100, showInTable = true, filterable = true)
     @Column(nullable = false, unique = true)
     private String nome;
 
+    @FormField(label = "Percentual de Custo", required = true, minLength = 1, maxLength = 10, showInTable = true, filterable = true)
     @Column(nullable = false)
     private Double percentualCusto;
 

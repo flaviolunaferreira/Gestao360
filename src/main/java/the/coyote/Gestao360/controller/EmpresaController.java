@@ -1,5 +1,6 @@
 package the.coyote.Gestao360.controller;
 
+import the.coyote.Gestao360.dto.config.FieldConfig;
 import the.coyote.Gestao360.dto.empresa.EmpresaRequestDTO;
 import the.coyote.Gestao360.dto.empresa.EmpresaResponseDTO;
 import the.coyote.Gestao360.service.EmpresaService;
@@ -11,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/empresas")
+@CrossOrigin(origins = "*")
 public class EmpresaController {
 
     private final EmpresaService empresaService;
@@ -47,5 +49,10 @@ public class EmpresaController {
     public ResponseEntity<Void> deleteEmpresa(@PathVariable Long id) {
         empresaService.deleteEmpresa(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/options")
+    public List<FieldConfig> getFieldConfigs() {
+        return empresaService.getFieldConfigs();
     }
 }

@@ -1,4 +1,4 @@
-package the.coyote.Gestao360.service.impl;
+package the.coyote.Gestao360.service.impl.plano;
 
 import the.coyote.Gestao360.dto.plano.PlanoRequestDTO;
 import the.coyote.Gestao360.dto.plano.PlanoResponseDTO;
