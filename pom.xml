@@ -14,7 +14,7 @@
  <name>Gestao360</name>
  <description>Sistema de gestão completo</description>
  <properties>
-  <java.version>21</java.version>
+  <java.version>17</java.version>
  </properties>
  <dependencies>
 
